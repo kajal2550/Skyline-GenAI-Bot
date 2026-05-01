@@ -1,0 +1,34 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good day", "Greetings", "What's up?"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! What's on your mind?", "Greetings! How can I help?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "I'm leaving", "Have a good day"],
+      "responses": ["Goodbye! Have a great day!", "See you soon!", "Take care!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+      "responses": ["You're very welcome!", "Happy to help!", "Anytime!"]
+    },
+    {
+      "tag": "about",
+      "patterns": ["Who are you?", "What are you?", "What is your purpose?", "What can you do?"],
+      "responses": ["I am an AI-powered chatbot designed to assist you with your queries.", "I'm your virtual assistant, here to help you navigate through information.", "I can answer questions, provide assistance, and keep you company!"]
+    },
+    {
+      "tag": "capabilities",
+      "patterns": ["What techniques do you use?", "How do you work?", "Are you using machine learning?", "What is your tech stack?"],
+      "responses": ["I use Natural Language Processing (NLP) and Machine Learning (specifically Scikit-learn) for intent recognition.", "I'm built using Python, Scikit-learn for ML, and a web-based frontend with HTML/CSS/JS.", "My brain is powered by text classification techniques like TF-IDF and Naive Bayes."]
+    },
+    {
+      "tag": "help",
+      "patterns": ["Help me", "I need assistance", "Can you help me?", "What should I do?"],
+      "responses": ["I'm here to help! Tell me what's on your mind.", "Sure! Please describe your issue or ask a question.", "I'm ready to assist. What do you need help with?"]
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant | Smart Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Animated Background Orbs -->
+        <div class="orbs-container">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="orb orb-4"></div>
+        </div>
+        <div class="floating-elements" id="floating-elements"></div>
+        
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="logo-text">
+                    <h1 style="letter-spacing: 1px;">SKYLINE <span style="font-weight: 300;">AI</span></h1>
+                    <span class="status"><span class="status-dot"></span> System Online</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="action-btns">
+                    <button class="icon-btn" title="Search history"><i class="fas fa-search"></i></button>
+                    <button class="icon-btn" title="Settings"><i class="fas fa-cog"></i></button>
+                </div>
+                <button id="theme-toggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="features-container">
+            <div class="feature-pill">Who are you?</div>
+            <div class="feature-pill">Help me code</div>
+            <div class="feature-pill">Tell a joke</div>
+            <div class="feature-pill">Latest News</div>
+        </div>
+
+        <main id="chat-window">
+            <div class="chat-container" id="chat-container">
+                <!-- Welcome Message -->
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Hello! I'm Skyline, your premium AI assistant. How can I help you today?
+                    </div>
+                    <span class="timestamp">Just now</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Search Modal -->
+        <div id="search-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Search History</h2>
+                    <span class="close-modal" id="close-search">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search past messages...">
+                    </div>
+                    <div class="search-results">
+                        <p class="empty-state">No recent history found.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Modal -->
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Settings</h2>
+                    <span class="close-modal" id="close-settings">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="setting-item">
+                        <span>AI Model</span>
+                        <select><option>Skyline-v2 (Fast)</option><option>Skyline-v3 (Power)</option></select>
+                    </div>
+                    <div class="setting-item">
+                        <span>Language</span>
+                        <select><option>English</option><option>Hindi</option><option>Spanish</option></select>
+                    </div>
+                    <div class="setting-item">
+                        <span>Notifications</span>
+                        <label class="switch"><input type="checkbox" checked><span class="slider round"></span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="input-area">
+            <div class="input-wrapper">
+                <input type="file" id="hidden-file-input" style="display: none;">
+                <button class="icon-btn" id="upload-trigger" title="Upload file"><i class="fas fa-plus"></i></button>
+                <input type="text" id="user-input" placeholder="Ask Skyline anything..." autocomplete="off">
+                <button class="icon-btn" title="Voice Input"><i class="fas fa-microphone"></i></button>
+                <button id="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <p class="disclaimer">Advanced Sky-Blue Edition • Powered by Scikit-learn</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
