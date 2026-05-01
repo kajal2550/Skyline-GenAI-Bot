@@ -1,10 +1,11 @@
 import json
 import random
+import os
 import google.generativeai as genai
 
 # ---------------------------------------------------------
 # GEMINI API KEY
-GEMINI_API_KEY = "AIzaSyDI0VwfUQxSUU1G3Pb70YZRgopR-4dt-ok"
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDI0VwfUQxSUU1G3Pb70YZRgopR-4dt-ok")
 # ---------------------------------------------------------
 
 class ChatbotModel:
